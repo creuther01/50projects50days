@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    height: 90vh; /* The container must have a specified height, 80 % pf the viewport height */
+    background-size: auto 100%; /* the background image must have a specified size, the width is set to auto and the height is set to 100% */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image in the div */
+    border-radius:  45px;
+
+    display: inline-block;
+    margin-right: 20px;
+
+    transition: all 0.75s ease-in; 
+
+    position: relative;  /* This is needed in order to position the text inside the div */
+}
+
+.passive {
+    width: 11vw;
+}
+
+.active {
+    width: 60vw;
+}
+
+p{
+    color: white;
+    font-family: 'Calibri', sans-serif;
+    font-size: 2.2vw;
+
+    position: absolute;
+    bottom: 0.5rem;
+    left: 2rem;
+
+    /* transition */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.active p{
+    transition-delay: 0.5s;
+    opacity: 1;
+}
